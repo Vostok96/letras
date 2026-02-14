@@ -103,9 +103,12 @@ button{
     transition: 0.3s;
 }
 
+/* BOTÓN SÍ */
 #yesBtn{
     background: #ff4da6;
     color: white;
+    position: relative; /* importante */
+    z-index: 1;
 }
 
 #yesBtn:hover{
@@ -113,15 +116,9 @@ button{
     transform: scale(1.1);
 }
 
+/* BOTÓN NO */
 #noBtn{
     background: #444;
     color: white;
-    position: absolute;
-}
-
-#mensaje{
-    margin-top: 40px;
-    color: #ff4da6;
-    font-size: 3em;
-    text-align: center;
+    position: relative; /* CAMBIAMOS ESTO */
 }
