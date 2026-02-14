@@ -86,3 +86,42 @@ h2 span:nth-child(29){animation-delay:2.8s;}
         transform: scale(1.3);
     }
 }
+.buttons{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+button{
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yesBtn{
+    background: #ff4da6;
+    color: white;
+}
+
+#yesBtn:hover{
+    background: #ff1a8c;
+    transform: scale(1.1);
+}
+
+#noBtn{
+    background: #444;
+    color: white;
+    position: absolute;
+}
+
+#mensaje{
+    margin-top: 40px;
+    color: #ff4da6;
+    font-size: 3em;
+    text-align: center;
+}
