@@ -8,10 +8,11 @@ yesBtn.addEventListener("click", () => {
 });
 
 // BOTÓN NO QUE HUYE
-noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - 150);
-    const y = Math.random() * (window.innerHeight - 100);
+noBtn.addEventListener("mouseenter", () => {
+    const container = document.querySelector(".buttons");
 
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
+    const x = Math.random() * 300 - 150;
+    const y = Math.random() * 200 - 100;
+
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
