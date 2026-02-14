@@ -18,6 +18,7 @@ h2{
     font-size: 4em;
     font-weight: 500;
     text-align: center; /* ← alineación centrada real */
+    line-height: 1.2;
 }
 
 h2 span{
@@ -92,7 +93,12 @@ h2 span:nth-child(29){animation-delay:2.8s;}
     justify-content: center;
     gap: 30px;
     position: relative;
+    width: 400px;   /* área controlada */
+    height: 150px;  /* altura del área */
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 button{
     padding: 15px 30px;
