@@ -10,35 +10,50 @@ body{
     align-items: center;
     min-height: 100vh;
     font-family: sans-serif;
-    background: #111; /* fondo oscuro para que brille */
-    text-align: center;
+    background: #111;
 }
 
 h2{
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 500;
-    display: flex;
-    gap: 10px;
-    align-items: center;
 }
 
 h2 span{
     animation: animate 1.5s linear infinite;
 }
 
-/* Animación escalonada */
-h2 span:nth-child(1){ animation-delay: 0s; }
-h2 span:nth-child(2){ animation-delay: 0.2s; }
-h2 span:nth-child(3){ animation-delay: 0.4s; }
-h2 span:nth-child(4){ animation-delay: 0.6s; }
-h2 span:nth-child(5){ animation-delay: 0.8s; }
+/* Animación escalonada automática */
+h2 span{
+    animation-delay: calc(0.1s * var(--i));
+}
 
 /* Corazón */
 .heart{
     color: red;
-    font-size: 1.2em;
     animation: heartbeat 1s infinite;
+    margin-left: 15px;
 }
 
-/* Efecto brillo texto */
-@
+@keyframes animate{
+    0%,80%{
+        color: #333;
+        text-shadow: none;
+    }
+    100%{
+        color: #fff;
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #ff4da6,
+            0 0 40px #ff4da6,
+            0 0 80px #ff4da6;
+    }
+}
+
+@keyframes heartbeat{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+}
